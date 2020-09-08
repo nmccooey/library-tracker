@@ -1,0 +1,80 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #212529;
+  height: 10vh;
+}
+
+.title {
+  text-transform: uppercase;
+  color: lightskyblue;
+  text-shadow: 0 0 5px lightskyblue;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
+}
+
+.book-container {
+  height: 60vh;
+  width: 70vw;
+  border: solid black 3px;
+  background-color: rgb(71, 69, 69);
+}
+
+.library-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 70vw;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  background-color: #212529;
+  text-shadow: 0 0 5px lightskyblue;
+  color: lightskyblue;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  margin: 0;
+  color: lightskyblue;
+  text-decoration: none;
+}
+
+.copyright:hover {
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 0 5px white;
+}
