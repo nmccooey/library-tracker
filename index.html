@@ -24,57 +24,28 @@
       <h1 class="title">Library Tracker &nbsp;<i class="fas fa-book-open"></i></h1>
     </header>
     <main>
-      <div class="book-container">
-
-        <div class="col s12 m7">
-          <div class="card horizontal">
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5>Fellowship of the Ring</h5>
-                <p>Author: JRR Tolkein</p>
-                <p>Pages: 653</p>
-                <p>Read Status: In Progress</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Edit</a>
-                <a href="#">Delete</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m7">
-          <div class="card horizontal">
-            <div class="card-stacked">
-              <div class="card-content">
-                <h5>Fellowship of the Ring</h5>
-                <p>Author: JRR Tolkein</p>
-                <p>Pages: 653</p>
-                <p>Read Status: In Progress</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Edit</a>
-                <a href="#">Delete</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="book-container"></div>
 
       </div>
       <div class="library-controls">
           <!-- Modal Trigger -->
           <button id="add-book-button" data-target="book-modal" class="btn modal-trigger">Add Book</button>
+          <button id="remove-all-button" class="btn modal-trigger red">Remove All Books</button>
       </div>
 
       <!-- Modal Structure -->
       <div id="book-modal" class="modal">
         <div class="modal-content">
-          <h3>Add New Book</h3>
-          <input id="title" placeholder="Title" type="text">
-          <input id="author" placeholder="Author" type="text">
-          <input id="pages" placeholder="Pages" type="number">
+          <h4>Add New Book:</h4>
+          <label for="title">Title:</label>
+          <input id="title" placeholder="Fellowship of the Ring" type="text">
+          <label for="author">Author:</label>
+          <input id="author" placeholder="J.R.R Tolkein" type="text">
+          <label for ="pages">Pages:</label>
+          <input id="pages" placeholder="652" type="number" min=1>
           <p>
-            <label>
-              <input type="checkbox" />
+            <label for="read">
+              <input id="read" type="checkbox" />
               <span>Read</span>
             </label>
           </p>
@@ -82,7 +53,7 @@
         </div>
         <div class="modal-footer">
           <a href="#" class="modal-action modal-close btn deep-orange darken-2">Cancel</a>
-          <a id="create-canvas-button" href="#" class="modal-action btn teal lighten-1">Add</a>
+          <a id="add-book-modal-button" href="#" class="modal-action btn teal lighten-1">Add</a>
         </div>
       </div>
     </main>
