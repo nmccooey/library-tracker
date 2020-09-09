@@ -28,61 +28,32 @@
 
         <div class="col s12 m7">
           <div class="card horizontal">
-            <div class="card-image">
-              <img src="https://lorempixel.com/100/190/nature/6">
-            </div>
             <div class="card-stacked">
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
+                <h5>Fellowship of the Ring</h5>
+                <p>Author: JRR Tolkein</p>
+                <p>Pages: 653</p>
+                <p>Read Status: In Progress</p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
               </div>
             </div>
           </div>
         </div>
         <div class="col s12 m7">
           <div class="card horizontal">
-            <div class="card-image">
-              <img src="https://lorempixel.com/100/190/nature/6">
-            </div>
             <div class="card-stacked">
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
+                <h5>Fellowship of the Ring</h5>
+                <p>Author: JRR Tolkein</p>
+                <p>Pages: 653</p>
+                <p>Read Status: In Progress</p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m7">
-          <div class="card horizontal">
-            <div class="card-image">
-              <img src="https://lorempixel.com/100/190/nature/6">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col s12 m7">
-          <div class="card horizontal">
-            <div class="card-image">
-              <img src="https://lorempixel.com/100/190/nature/6">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
               </div>
             </div>
           </div>
@@ -90,7 +61,29 @@
 
       </div>
       <div class="library-controls">
-        <a id="add-book-button" class="waves-effect waves-light btn-large">Add Book</a>
+          <!-- Modal Trigger -->
+          <button id="add-book-button" data-target="book-modal" class="btn modal-trigger">Add Book</button>
+      </div>
+
+      <!-- Modal Structure -->
+      <div id="book-modal" class="modal">
+        <div class="modal-content">
+          <h3>Add New Book</h3>
+          <input id="title" placeholder="Title" type="text">
+          <input id="author" placeholder="Author" type="text">
+          <input id="pages" placeholder="Pages" type="number">
+          <p>
+            <label>
+              <input type="checkbox" />
+              <span>Read</span>
+            </label>
+          </p>
+          
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="modal-action modal-close btn deep-orange darken-2">Cancel</a>
+          <a id="create-canvas-button" href="#" class="modal-action btn teal lighten-1">Add</a>
+        </div>
       </div>
     </main>
 
