@@ -24,16 +24,16 @@
       <h1 class="title">Library Tracker &nbsp;<i class="fas fa-book-open"></i></h1>
     </header>
     <main>
-      <div class="book-container"></div>
+      <div class="book-container">
+      </div>
 
       </div>
       <div class="library-controls">
-          <!-- Modal Trigger -->
-          <button id="add-book-button" data-target="book-modal" class="btn modal-trigger">Add Book</button>
-          <button id="remove-all-button" class="btn modal-trigger red">Remove All Books</button>
+        <!-- New Book Modal Trigger -->
+        <button id="add-book-button" data-target="book-modal" class="waves-effect modal-trigger waves-light btn-small blue darken-1">Add Book</button>
       </div>
 
-      <!-- Modal Structure -->
+      <!-- New Book Modal Structure -->
       <div id="book-modal" class="modal">
         <div class="modal-content">
           <h4>Add New Book:</h4>
@@ -52,10 +52,11 @@
           
         </div>
         <div class="modal-footer">
-          <a href="#" class="modal-action modal-close btn deep-orange darken-2">Cancel</a>
-          <a id="add-book-modal-button" href="#" class="modal-action btn teal lighten-1">Add</a>
+          <a href="#" class="modal-action modal-close btn red darken-2">Cancel</a>
+          <a id="add-book-modal-button" href="#" class="modal-action btn blue darken-1">Add</a>
         </div>
       </div>
+
     </main>
 
     <footer>

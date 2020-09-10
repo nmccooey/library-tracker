@@ -64,8 +64,13 @@ main {
   width: 70vw;
 }
 
+.library-status {
+  color: white;
+  font-size: 20px;
+  display: none;
+}
+
 #add-book-button {
-  background-color: #1e88e5;
   color: white;
   text-shadow: 0 0 5px #1e88e5;
 }
