@@ -30,13 +30,6 @@ function initializeModal() {
     let author = document.querySelector("#author").value;
     let pages = document.querySelector("#pages").value;
     let read = document.querySelector("#read").checked;
-    
-    // Check read value.
-    if (read) {
-      read = "Finished";
-    } else {
-      read = "In Progress";
-    }
 
     // Check all other values.
     if (title == "") {
@@ -83,10 +76,14 @@ function newBookRender(newBook) {
         <span class="card-title">${newBook.title}</span>
         <p>Author: ${newBook.author}</p>
         <p>Pages: ${newBook.pages}</p>
-        <p>Read: <span id="read-status">${newBook.read}</span></p>
       </div>
       <div class="card-action">
-        <button class="waves-effect waves-light btn-small green darken-2" id="read-button">Read</button>
+        <p>
+          <label>
+            <input id="read-check" type="checkbox" class="filled-in checkbox-blue" />
+            <span>Finished Reading</span>
+          </label>
+        </p>
         <button class="waves-effect waves-light btn-small red darken-2" id="delete-button">Delete</button>
       </div>
     </div>
@@ -99,31 +96,37 @@ function newBookRender(newBook) {
     delete myLibrary[bookIndexNumber];
   });
 
-  // Add Read button event listener.
-  const readButton = bookCard.querySelector("#read-button");
-  if (newBook.read == "In Progress") {
-    readButton.innerText = "Read";
-  } else {
-    readButton.innerText = "Unread";
-  }
+  // Set initial read status.
+  const readCheck = bookCard.querySelector("#read-check");
+  toggleCheckBox();
 
-  readButton.addEventListener("click", function(){
-    const readStatus = bookCard.querySelector("#read-status");
-    if (myLibrary[bookIndexNumber].read == "Finished") {
-      myLibrary[bookIndexNumber].read = "In Progress"
-      readStatus.innerText = myLibrary[bookIndexNumber].read;
-      this.innerText = "Read";
+  // Add read status checkbox event listener.
+  readCheck.addEventListener("change", function(){
+    if (newBook.read) {
+      newBook.read = false;
+      toggleCheckBox();
     } else {
-      myLibrary[bookIndexNumber].read = "Finished"
-      readStatus.innerText = myLibrary[bookIndexNumber].read;
-      this.innerText = "Unread";
+      newBook.read = true;
+      toggleCheckBox();
     }
   });
+
+  function toggleCheckBox() {
+    const card = bookCard.querySelector(".card");
+    if (newBook.read) {
+      readCheck.checked = true;
+      card.classList.remove("blue-grey");
+      card.classList.add("green");
+    } else {
+      readCheck.checked = false;
+      card.classList.remove("green");
+      card.classList.add("blue-grey");
+    }
+  }
 
   bookContainer.appendChild(bookCard);
 }
 
 initializeModal();
-addBook("Lord of the Rings", "J.R.R Tolkein", 654, "Finished");
-addBook("Hunger Games", "Suzanne Collins", 354, "In Progress");
-addBook("Diary of a Whimpy Adult", "Donald J. Trump", 154, "Finished");
+addBook("Lord of the Rings", "J.R.R Tolkein", 654, true);
+addBook("Hunger Games", "Suzanne Collins", 354, false);
