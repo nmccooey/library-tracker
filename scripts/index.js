@@ -128,5 +128,6 @@ function newBookRender(newBook) {
 }
 
 initializeModal();
-addBook("Lord of the Rings", "J.R.R Tolkein", 654, true);
-addBook("Hunger Games", "Suzanne Collins", 354, false);
+addBook("The Hobbit", "J.R.R Tolkein", 288, true);
+addBook("The Hunger Games", "Suzanne Collins", 384, false);
+addBook("Under the Dome", "Stephen King", 1074, true);
